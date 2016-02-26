@@ -1,0 +1,32 @@
+'atom-text-editor': 'ctrl-O': 'url-utils:open'
+
+# OS X
+'.platform-darwin atom-text-editor':
+	'cmd-u o': 'url-utils:open' #cmd-o u
+
+# Editor
+'.platform-darwin atom-text-editor:not([mini])': #[data-grammar$="gfm"]
+
+	'cmd-u t': 'url-utils:tidy' #cmd-u y
+
+	'cmd-u l': 'url-utils:linkify'
+	'cmd-u k': 'url-utils:linkify'
+
+	'cmd-u e': 'url-utils:uri-encode' #cmd-e u
+	'cmd-u d': 'url-utils:decode-uri'
+#-------------------------------------------------------------------------------
+
+'.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
+	'ctrl-u o': 'url-utils:open' #ctrl-o u
+
+# Editor
+'.platform-win32 atom-text-editor:not([mini]),
+ .platform-linux atom-text-editor:not([mini])':
+
+	'ctrl-u t': 'url-utils:tidy' #ctrl-u y
+
+	'ctrl-u l': 'url-utils:linkify'
+	'ctrl-u k': 'url-utils:linkify'
+
+	'ctrl-u e': 'url-utils:uri-encode' #ctrl-e u
+	'ctrl-u d': 'url-utils:decode-uri'

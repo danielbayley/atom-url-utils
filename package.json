@@ -1,0 +1,72 @@
+{
+  "name": "url-utils",
+  "version": "0.0.0",
+  "description": "A small set of utilities for manipulating URLs.",
+  "keywords": [
+    "url",
+    "uri",
+    "format",
+    "beautify",
+    "utils"
+  ],
+  "homepage": "http://atom.io/packages/url-utils",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielbayley/atom-url-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danielbayley/atom-url-utils/issues"
+  },
+  "author": {
+    "name": "danielbayley <danielbayley@http://me.com>"
+  },
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "title-from-url": "*"
+  },
+  "engines": {
+    "atom": "*"
+  },
+  "configSchema": {
+    "autoTidy": {
+      "description": "Automatically tidy up all URLs when specified files are saved.",
+      "type": "string",
+      "default": "None",
+      "enum": [
+        "Any",
+        "None",
+        "Specific"
+      ]
+    },
+    "grammars": {
+      "description": "Specify a list of file types to tidy automatically.",
+      "type": "array",
+      "default": [
+        "Markdown",
+        "gfm",
+        "plain",
+        "html",
+        "pug",
+        "jade",
+        "haml",
+        "litcoffee",
+        "todo"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "linkifyTidy": {
+      "description": "Also tidy up URLs on _linkify_.",
+      "type": "boolean",
+      "default": true
+    },
+    "https": {
+      "title": "Always use secure https",
+      "description": "Enforce https when processing URLs.",
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

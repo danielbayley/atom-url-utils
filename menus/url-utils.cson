@@ -1,0 +1,24 @@
+menu: [
+	label: "Packages"
+	submenu: [
+		label: "URL Utils"
+		submenu: [
+			{ label: "Tidy URL/s", command: 'url-utils:tidy'}
+			{ label: "URI Encode", command: 'url-utils:uri-encode'}
+			{ label: "Decode URI/s", command: 'url-utils:decode-uri'}
+			{ label: "Open URL/s", command: 'url-utils:open'}
+			{ label: "Linkify", command: 'url-utils:linkify'}
+			# { label: "Shorten URL/s", command: 'url-utils:shorten'}
+]	]	]
+
+'context-menu':
+	'atom-workspace atom-text-editor:not(.mini)': [
+		label: "URL Utils"
+		submenu: [
+			{ label: "Tidy URL/s", command: 'url-utils:tidy'}
+			{ label: "URI Encode", command: 'url-utils:uri-encode'}
+			{ label: "Decode URI/s", command: 'url-utils:decode-uri'}
+			{ label: "Open URL/s", command: 'url-utils:open'}
+			{ label: "Linkify", command: 'url-utils:linkify'}
+			# { label: "Shorten URL/s", command: 'url-utils:shorten'}
+]	]
