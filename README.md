@@ -5,7 +5,7 @@ A small set of utilities for manipulating URLs in [Atom](https://atom.io).
 Each command works on multiple selections, or each URL found in a block of selected text.
 
 #### Tidy
-Currently removes any unnecessary `www.` or trailing `/` from selected URLs, and prepends the `http://` protocol if absent. For example, `www.atom.io` becomes `http://atom.io`.
+Currently removes any unnecessary `www.` or trailing `/` from selected URLs, and prepends the `http://` protocol if absent. For example, `www.atom.io/` becomes `http://atom.io`.
 
 This can be configured in the package settings to always enforce [https](https://mashable.com/2011/05/31/https-web-security).
 
