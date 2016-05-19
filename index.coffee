@@ -11,11 +11,12 @@ module.exports =
 			[/_\w@:%+,~#?&;=-]*			# Content
 		\b)/?											# Trailing slash
 		///g
+
 	subs: null
 	activate: ->
 		{CompositeDisposable} = require 'atom'
 		@subs = new CompositeDisposable
-#------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 
 		@subs.add atom.commands.add 'atom-text-editor',
 			'url-utils:tidy': =>
@@ -51,8 +52,10 @@ module.exports =
 			if @selection.isEmpty()
 				{cursor} = @selection
 				expand = [
-					cursor.getBeginningOfCurrentWordBufferPosition wordRegex: @line, allowPrevious: false #/[^\s(]+/
-					cursor.getEndOfCurrentWordBufferPosition wordRegex: @line, allowNext: false #/[^\s)]+/
+					cursor.getBeginningOfCurrentWordBufferPosition wordRegex: @line,
+						allowPrevious: false #/[^\s(]+/
+					cursor.getEndOfCurrentWordBufferPosition wordRegex: @line,
+						allowNext: false #/[^\s)]+/
 				]
 				@selection.setBufferRange expand # selection
 				selected.push expand
