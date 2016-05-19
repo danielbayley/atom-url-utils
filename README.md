@@ -35,7 +35,7 @@ License
 [MIT]:						LICENSE.md
 [Daniel Bayley]:	https://github.com/danielbayley
 [atom]:						https://atom.io
-[grammar]:				https://atom.io/docs/latest/using-atom-grammar
+[grammar]:				http://flight-manual.atom.io/using-atom/sections/grammar
 [browser-plus]:		https://atom.io/packages/browser-plus
 [markdown]:				http://commonmark.org/help/tutorial/05-links.html
 [HTML]:						http://w3schools.com/html/html_links.asp
