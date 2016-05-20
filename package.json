@@ -1,6 +1,6 @@
 {
   "name": "url-utils",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A small set of utilities for manipulating URLs.",
   "keywords": [
     "url",
