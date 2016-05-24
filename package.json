@@ -23,7 +23,7 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "title-from-url": "*"
+    "title-from-url": "github:azer/title-from-url"
   },
   "engines": {
     "atom": "*"
