@@ -9,6 +9,7 @@ module.exports =
 			[a-z\d-]+								# Domain
 			(\.[a-z]{2,4})+					# TLD
 			[/_\w@:%+,~#?&;=-]*			# Content
+			[./_\w@:%+,~#?&;=-]*			# Content
 		\b)/?											# Trailing slash
 		///g
 
