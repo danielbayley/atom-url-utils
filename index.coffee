@@ -23,7 +23,7 @@ module.exports =
 				@filter @get(), (URLs) => URLs.replace @tidy @matchText
 			'url-utils:uri-encode': => @encoding encodeURI
 			'url-utils:decode-uri': => @encoding decodeURI
-			'url-utils:open': => @filter @get(), => @open @matchText
+			#'url-utils:open': => @filter @get(), => @open @matchText
 			'url-utils:linkify': =>
 				@filter @get(), (URLs) => URLs.replace @linkify @matchText
 			# TODO 'url-utils:shorten': => @shorten()
@@ -83,11 +83,11 @@ module.exports =
 	encoding: (format) ->
 		@get(); @selection.insertText format(@selection.getText()), select: true
 
-	open: (URL) ->
+	#open: (URL) -> TODO
 		#unless @config().browser is 'external' #default
-		# TODO if atom.packages.isPackageActive 'browser-plus'
-		{openExternal} = require 'shell'
-		try openExternal URL
+		#if atom.packages.isPackageLoaded 'browser-plus'
+			##{openExternal} = require 'shell'
+			#try openExternal URL
 
 #-------------------------------------------------------------------------------
 	deactivate: -> @subs.dispose()

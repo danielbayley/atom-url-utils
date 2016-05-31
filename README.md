@@ -17,7 +17,7 @@ The ability to automatically tidy up all URLs when specified files are saved can
 [URI] encode/decode selected text.
 
 ### Open
-Open selected links in the default external browser or a new pane if [browser-plus] is active.
+Open selected links in your default browser.
 
 ### Linkify
 Wrap selected URLs in either [Markdown] or [HTML] link tags, depending on the current [grammar].
