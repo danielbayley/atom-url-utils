@@ -30,20 +30,19 @@ module.exports =
 
 		@subs.add atom.workspace.observeTextEditors (editor) =>
 			editor.buffer.onWillSave =>
-				autoTidy = atom.config.get 'url-utils.autoTidy'
 
-				unless autoTidy is 'None' #indexOf
-					{scopeName,name} = editor.getGrammar() #scopeName.split('.')[1]
-					grammars = atom.config.get 'url-utils.grammars'
+				unless @config().autoTidy is 'None' #indexOf
+					{scopeName, name} = editor.getGrammar() #scopeName.split('.')[1]
 
-					unless autoTidy is 'Any'
-						return unless grammars.some (grammar) ->
+					unless @config().autoTidy is 'Any'
+						return unless @config().grammars.some (grammar) ->
 							~name.indexOf(grammar) or ~scopeName.indexOf grammar
 
 					try @filter [editor.buffer.getRange()], (URLs) =>
 						URLs.replace @tidy @matchText
 #-------------------------------------------------------------------------------
 
+	config: -> atom.config.get 'url-utils'
 	editor: -> atom.workspace.getActiveTextEditor()
 	#grammar: -> @editor().getGrammar()
 	get: ->
@@ -65,16 +64,16 @@ module.exports =
 	filter: (selected, process) -> #URL/s
 		for selection in selected #text
 			@editor().backwardsScanInBufferRange @URL, selection, (URL) => #.buffer.scanInRange
-				{@matchText} = URL
 				process URL
+				{@matchText} = URL
 #-------------------------------------------------------------------------------
 
 	tidy: (URL) ->
-		s = if atom.config.get 'url-utils.https' then 's' else '$1'
+		s = if @config().https then 's' else '$1'
 		URL.replace @URL,"http#{s}://$2"
 
 	linkify: (URL) ->
-		URL = @tidy URL if atom.config.get 'url-utils.linkifyTidy'
+		URL = @tidy URL if @config().linkifyTidy
 		{scopeName} = @editor().getGrammar()
 
 		title = require('title-from-url') URL #.match( /\/+(.+)\..*/ )[1]
@@ -85,7 +84,7 @@ module.exports =
 		@get(); @selection.insertText format(@selection.getText()), select: true
 
 	open: (URL) ->
-		#unless atom.config.get 'url-utils.browser' is 'external' #default
+		#unless @config().browser is 'external' #default
 		# TODO if atom.packages.isPackageActive 'browser-plus'
 		{openExternal} = require 'shell'
 		try openExternal URL
