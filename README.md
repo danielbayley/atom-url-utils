@@ -26,7 +26,7 @@ Wrap selected URLs in either [Markdown] or [HTML] link tags, depending on the cu
 
 Install
 -------
-`apm install url-utils` or search "url" under packages within Atom.
+`apm install url-utils` or search “url” under packages within Atom.
 
 License
 -------

@@ -9,7 +9,7 @@
     "beautify",
     "utils"
   ],
-  "homepage": "http://atom.io/packages/url-utils",
+  "homepage": "https://atom.io/packages/url-utils",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danielbayley/atom-url-utils.git"
@@ -17,9 +17,7 @@
   "bugs": {
     "url": "https://github.com/danielbayley/atom-url-utils/issues"
   },
-  "author": {
-    "name": "danielbayley <danielbayley@http://me.com>"
-  },
+  "author": "Daniel Bayley <daniel.bayley@me.com> (https://github.com/danielbayley)",
   "private": true,
   "license": "MIT",
   "dependencies": {

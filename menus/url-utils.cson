@@ -10,6 +10,7 @@ menu: [
 			{ label: "Linkify", command: 'url-utils:linkify'}
 			# { label: "Shorten URL/s", command: 'url-utils:shorten'}
 ]	]	]
+#-------------------------------------------------------------------------------
 
 'context-menu':
 	'atom-workspace atom-text-editor:not(.mini)': [
