@@ -1,11 +1,11 @@
 'atom-text-editor': 'ctrl-O': 'link:open' #url-utils:open
 
-# OS X
+# macOS
 '.platform-darwin atom-text-editor':
 	'cmd-u o': 'url-utils:open' #link:open #cmd-o u
 
 # Editor
-'.platform-darwin atom-text-editor:not([mini])': #[data-grammar$="gfm"]
+'.platform-darwin atom-text-editor:not([mini])': #[data-grammar$=gfm]
 
 	'cmd-u t': 'url-utils:tidy' #cmd-u y
 
