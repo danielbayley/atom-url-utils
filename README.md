@@ -17,7 +17,7 @@ The ability to automatically tidy up all URLs when specified files are saved can
 [URI] encode/decode selected text.
 
 ### Open
-Open selected links in your default browser.
+Open selected links in your default browser, or _[atom-webbrowser]_ tabs if installed and configured in package settings.
 
 ### Linkify
 Wrap selected URLs in either [Markdown] or [HTML] link tags, depending on the current [grammar].
@@ -41,3 +41,4 @@ License
 [HTML]:						http://w3schools.com/html/html_links.asp
 [URI]:						https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
 [https]:					https://mashable.com/2011/05/31/https-web-security
+[atom-webbrowser]:  https://atom.io/packages/atom-webbrowser

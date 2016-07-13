@@ -65,6 +65,15 @@
       "description": "Enforce https when processing URLs.",
       "type": "boolean",
       "default": false
+    },
+    "browser": {
+      "description": "Open selected links in your default browser, or _[atom-webbrowser]_ tabs?\n[atom-webbrowser]:\thttps://atom.io/packages/atom-webbrowser",
+      "type": "string",
+      "enum": [
+        "External",
+        "atom-webbrowser"
+      ],
+      "default": "External"
     }
   }
 }

@@ -2,7 +2,7 @@
 
 # OS X
 '.platform-darwin atom-text-editor':
-	'cmd-u o': 'link:open' #url-utils:open #cmd-o u
+	'cmd-u o': 'url-utils:open' #link:open #cmd-o u
 
 # Editor
 '.platform-darwin atom-text-editor:not([mini])': #[data-grammar$="gfm"]
@@ -17,7 +17,7 @@
 #-------------------------------------------------------------------------------
 
 '.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
-	'ctrl-u o': 'link:open' #url-utils:open #ctrl-o u
+	'ctrl-u o': 'url-utils:open' #link:open #ctrl-o u
 
 # Editor
 '.platform-win32 atom-text-editor:not([mini]),
