@@ -1,4 +1,5 @@
-[![apm]](https://atom.io/packages/url-utils)
+[![badge][apm]][package]
+[![badge][chat]][#slack]
 
 [Atom] URL Utils
 ================
@@ -38,6 +39,9 @@ License
 [Daniel Bayley]:    https://github.com/danielbayley
 [atom]:             https://atom.io
 [apm]:              https://img.shields.io/apm/v/url-utils.svg?style=flat-square
+[package]:          https://atom.io/packages/url-utils
+[chat]:             https://img.shields.io/badge/chat-atom.io%20slack-ff69b4.svg?style=flat-square
+[#slack]:           https://atom-slack.herokuapp.com
 
 [grammar]:          http://flight-manual.atom.io/using-atom/sections/grammar
 [markdown]:         http://commonmark.org/help/tutorial/05-links.html

@@ -5,7 +5,7 @@
 	'cmd-u o': 'url-utils:open' #link:open #cmd-o u
 
 # Editor
-'.platform-darwin atom-text-editor:not([mini])': #[data-grammar$=gfm]
+'.platform-darwin atom-text-editor:not(.mini)': #[data-grammar$=gfm]
 
 	'cmd-u t': 'url-utils:tidy' #cmd-u y
 
@@ -20,8 +20,8 @@
 	'ctrl-u o': 'url-utils:open' #link:open #ctrl-o u
 
 # Editor
-'.platform-win32 atom-text-editor:not([mini]),
- .platform-linux atom-text-editor:not([mini])':
+'.platform-win32 atom-text-editor:not(.mini),
+ .platform-linux atom-text-editor:not(.mini)':
 
 	'ctrl-u t': 'url-utils:tidy' #ctrl-u y
 
