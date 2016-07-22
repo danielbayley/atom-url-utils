@@ -24,7 +24,7 @@ module.exports =
 
 		# Modify `browser` setting options. TODO
 		#for browser in @browsers
-			#if atom.packages.isPackageLoaded browser
+			#if atom.packages.isPackageActive browser
 				#config[?] =
 
 		@subs.add atom.commands.add 'atom-text-editor',
@@ -108,7 +108,7 @@ module.exports =
 			{openExternal} = require 'shell'
 			try openExternal URL
 		#else if browser is 'atom-webbrowser' and
-		else if atom.packages.isPackageLoaded browser
+		else if atom.packages.isPackageActive browser
 			atom.workspace.open URL
 
 #-------------------------------------------------------------------------------
